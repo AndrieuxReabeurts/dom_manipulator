@@ -3,6 +3,7 @@ get '/' do
 end
 
 get '/skills/:skill' do
+  @params_skillz = params[:skill].capitalize
   erb :skills
 end
 
@@ -15,6 +16,7 @@ get '/meals' do
             "Sushi",
             "Linguini",
             "Onigilli"]
+  @meal = @meals.sample
   erb :meals
 end
 
